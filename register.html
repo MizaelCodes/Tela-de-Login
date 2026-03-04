@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registrar</title>
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="Login(); return false;">
+            <div>
+                <label>Nome Completo:</label>
+                <input type="text" placeholder="Digite seu nome" id="name" required maxlength="32">
+            </div>
+            <div>
+                <label>E-mail:</label>
+                <input type="email" placeholder="Digite seu e-mail" id="email" required>
+            </div>
+            <div>
+                <label>Senha:</label>
+                <input type="password" placeholder="Digite uma senha" id="password" required>
+            </div>
+            <div>
+                <button onclick="Login()">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
