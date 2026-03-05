@@ -1,9 +1,9 @@
-function Login(){
+function Login() {
     let nome = document.getElementById('name').value
     let mail = document.getElementById('email').value
     let senha = document.getElementById('password').value
 
-    if(nome != "" && mail != "" && senha != ""){
+    if (nome != "" && mail != "" && senha != "") {
         localStorage.setItem("nome", nome)
         localStorage.setItem("mail", mail)
         localStorage.setItem("senha", senha)
@@ -11,26 +11,29 @@ function Login(){
         alert('Usuario Cadastrado!')
         window.location.href = "login.html"
     }
-    else{
+    else {
         alert('Por favor preenche os campos informados!')
     }
 }
 
-function acesso(){
+function acesso() {
 
     let mailDigitado = document.getElementById("email").value
     let senhaDigitada = document.getElementById("password").value
 
     let mailSalvo = localStorage.getItem("mail")
     let senhaSalva = localStorage.getItem("senha")
-    let nomeSalvo = localStorage.getItem("nome")
 
-    if(mailDigitado === mailSalvo && senhaDigitada === senhaSalva){
-        alert("Bem-vindo " + nomeSalvo)
+    if (mailDigitado === mailSalvo && senhaDigitada === senhaSalva) {
         window.location.href = "index.html"
     }
-    else{
+    else {
         alert("Usuario incorreto")
     }
 
+}
+
+function Hello() {
+    let nomeSalvo = localStorage.getItem("nome")
+    document.getElementById("nome").innerText = "Bem Vindo " + nomeSalvo
 }
