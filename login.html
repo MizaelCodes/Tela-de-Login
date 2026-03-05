@@ -10,17 +10,17 @@
 
 <body>
     <div class="container">
-        <form>
+        <form onsubmit="acesso(); return false;">
             <div>
                 <label>E-mail:</label>
                 <input type="email" placeholder="Digite seu e-mail" id="email" required>
             </div>
             <div>
                 <label>Senha:</label>
-                <input type="password" placeholder="Digite uma senha" id="password" required>
+                <input type="password" placeholder="Digite uma senha" id="password" required maxlength="16">
             </div>
             <div>
-                <button onclick="Login()">Enviar</button>
+                <button onclick="acesso()">Entrar</button>
             </div>
         </form>
     </div>

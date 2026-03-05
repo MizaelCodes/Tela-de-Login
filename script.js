@@ -4,9 +4,33 @@ function Login(){
     let senha = document.getElementById('password').value
 
     if(nome != "" && mail != "" && senha != ""){
-        alert('Usuario Cadastrado!');
-        window.location.href = "login.html";
-    }else{
+        localStorage.setItem("nome", nome)
+        localStorage.setItem("mail", mail)
+        localStorage.setItem("senha", senha)
+
+        alert('Usuario Cadastrado!')
+        window.location.href = "login.html"
+    }
+    else{
         alert('Por favor preenche os campos informados!')
     }
+}
+
+function acesso(){
+
+    let mailDigitado = document.getElementById("email").value
+    let senhaDigitada = document.getElementById("password").value
+
+    let mailSalvo = localStorage.getItem("mail")
+    let senhaSalva = localStorage.getItem("senha")
+    let nomeSalvo = localStorage.getItem("nome")
+
+    if(mailDigitado === mailSalvo && senhaDigitada === senhaSalva){
+        alert("Bem-vindo " + nomeSalvo)
+        window.location.href = "index.html"
+    }
+    else{
+        alert("Usuario incorreto")
+    }
+
 }
