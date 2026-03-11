@@ -9,7 +9,7 @@ function Login() {
         localStorage.setItem("senha", senha)
 
         alert('Usuario Cadastrado!')
-        window.location.href = "login.html"
+        window.location.href = "index.html"
     }
     else {
         alert('Por favor preenche os campos informados!')
@@ -25,7 +25,7 @@ function acesso() {
     let senhaSalva = localStorage.getItem("senha")
 
     if (mailDigitado === mailSalvo && senhaDigitada === senhaSalva) {
-        window.location.href = "index.html"
+        window.location.href = "page.html"
     }
     else {
         alert("Usuario incorreto")
@@ -35,5 +35,9 @@ function acesso() {
 
 function Hello() {
     let nomeSalvo = localStorage.getItem("nome")
-    document.getElementById("nome").innerText = "Bem Vindo " + nomeSalvo
+    document.getElementById("nome").innerText = "" + nomeSalvo
+}
+
+function IrRegistro(){
+    window.location.href = "register.html"
 }

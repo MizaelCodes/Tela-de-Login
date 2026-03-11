@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     width: 100%;
     height: 100vh;
     background: linear-gradient(45deg, #5d19ac, #d808ab);
